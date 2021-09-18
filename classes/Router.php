@@ -10,7 +10,7 @@
 			if($path == ''){
 				$path = '/';
 			}
-			if($url[0] != '/'){
+			if($url != '/'){
 				$url = '/'.$url;
 			}
 			if($url[strlen($url)-1] != '/'){

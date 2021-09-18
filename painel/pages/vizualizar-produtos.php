@@ -47,6 +47,7 @@
         $imagemSingle = $imagemSingle->fetch()['imagem'];
       ?>
       <div class="boxShop card">
+      <div class="ribbone"> <div class="ribbon"><span>NOVO</span></div></div>
         <div class="boxBody bodyCard text-center">
             <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $imagemSingle ?>" />
         </div><!--boxBody-->

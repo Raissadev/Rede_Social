@@ -18,7 +18,7 @@
 <base base="<?php echo INCLUDE_PATH_PAINEL ?>" />
 
 <main id="mainContent">
-	<aside id="asidePainel" ontouchstart="showCoordinates(event)" ontouchmove="showCoordinates(event)">
+	<aside class="asidePainel" ontouchstart="showCoordinates(event)" ontouchmove="showCoordinates(event)">
 		<div class="wrap">
 			<div class="userPainel items-flex">
 				<div class="boxUser">
@@ -78,11 +78,6 @@
 						<li><a <?php selecionadoMenu('cadastrar-produtos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-produtos"><i class="myGit" data-feather="box"></i> Cadastrar Produtos</a></li>
 						<li><a <?php selecionadoMenu('vizualizar-produtos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>vizualizar-produtos"><i class="myGit" data-feather="shopping-cart"></i> Vizualizar Produtos</a></li>
 					</ul>
-					<h2>Gestão de Imóveis</h2>
-					<ul>
-						<li><a <?php selecionadoMenu('cadastrar-empreendimento'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-empreendimento"><i class="myGit" data-feather="coffee"></i> Cadastrar Imóvel</a></li>
-						<li><a <?php selecionadoMenu('vizualizar-produtos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-empreendimentos"><i class="myGit" data-feather="home"></i> Listar Empreendimentos</a></li>
-					</ul>
 				</div><!--wrapperMenu-->
 			</div><!--menu-->
 		</div><!--wrap-->
@@ -94,8 +89,7 @@
 			<div class="wrap grid-5x5">
 				<div class="row items-flex w90 center">
 					<div class="headerIcon items-flex w40Mobile">
-						<span id="menuClose" class="btnIcon"><i class="menuMobile" data-feather="menu"></i> </span>
-						<span id="menuOpen" class="btnIcon"><i class="menuMobile" data-feather="menu"></i> </span>
+						<span class="btnIcon btnIconClick"><i class="menuMobile" data-feather="menu"></i> </span>
 					</div><!--headerIcon-->
 					<div class="headerInput w70">
 						<form method="post" class="items-flex w100">

@@ -277,11 +277,15 @@ ul{
 svg{
 	vertical-align: middle;
 }
+.showMenu{
+	display: none !important;
+}
 .card{
 	background-color: var(--bgTwo);
     box-shadow: 0 3px 9px 0 rgb(28 28 51 / 15%);
 	background-clip: border-box;
     border-radius: 5px;
+	position: relative;
 }
 div.btnPags {
 	height: 15vh;
@@ -336,7 +340,6 @@ div.btnPags .btnSelected{
 .boxMessage a.breadTwo{
 	color: var(--myPurple);
 }
-
 
 
 section.formDefault input, section.formDefault textarea{
@@ -706,7 +709,6 @@ section.contentShop .searchContent{
 }
 section.contentShop .boxShop{
 	min-height: 60vh;
-	overflow:hidden;
 }
 section.contentShop .boxShop .boxBody img{
 	width: 100%;
@@ -947,55 +949,56 @@ section.cardProduct .boxShop .imagesGrid .deletImgs.btnsImgs a{
 .bag{
 	max-width: 25%;
     position: absolute;
-    margin: -0.5% 0 0 19%;
+    right: 20%;
+    top: -1.8%;
 }
-span.ribbon{
-	position: absolute;
-    color: #fff;
-    z-index: 1;
+section.contentShop .boxShop .ribbon span {
+    color: #FFF;
+    background: linear-gradient(var(--myPurpleTwo) 0%, var(--myPurple) 100%);
 }
-span.ribbon span{
-	position: relative;
-    display: block;
+.ribbone{
+	display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
     text-align: center;
-    background: #F8463F;
-    font-size: 14px;
-    line-height: 1;
-    padding: 12px 8px 10px;
-    border-top-right-radius: 8px;
-	width: 60px;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    box-shadow: 0 3px 10px -5px black;
+    position: absolute;
+	z-index: 2;
+	top: 1rem;
+    right: -1.6rem;
 }
-span.ribbon span.ribbonAdrent:before {
-    height: 6px;
-    width: 6px;
-    left: -6px;
-    top: 0;
-    background: #F8463F;
-	position: absolute;
-    content: "";
+.ribbon span::before {
+    border-left: 3px solid var(--myPurple);
+    border-top: 3px solid var(--myPurple);
+	border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+	content: "";
+    position: absolute;
+    z-index: 1;
+	left: -1px;
+    height: 100%;
 }
-span.ribbon span.ribbonAdrent:after {
-    height: 6px;
-    width: 8px;
-    left: -8px;
-    top: 0;
-    border-radius: 8px 8px 0 0;
-    background: #C02031;
-	position: absolute;
-    content: "";
+.ribbon span::after {
+    border-right: 3px solid var(--myPurple);
+    border-top: 3px solid var(--myPurple);
+	border-bottom: 3px solid transparent;
+	content: "";
+    position: absolute;
+    z-index: 1;
+    border-left: 3px solid transparent;
+	right:-1px;
+    height: 100%;
 }
-span.ribbon:after {
-	position: absolute;
-    content: "";
-    width: auto;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 20px solid #F8463F;
-}
-
-
-
-
 
 
 
@@ -1094,8 +1097,8 @@ span.ribbon:after {
 		max-width: 49%;
 	}
 	.bag {
-		margin: -1.2% 0 0 31%;
-	}
+		right: 35%;
+	}	
 }
 
 

@@ -16,6 +16,7 @@
 				<div class="bodyCard">
                     <?php
                         if(isset($_POST['acao'])){
+                            echo $_POST['preco'];
                             $nome = $_POST['nome'];
                             $descricao = $_POST['descricao'];
                             $largura = $_POST['largura'];
@@ -23,7 +24,7 @@
                             $peso = $_POST['peso'];
                             $comprimento = $_POST['comprimento'];
                             $quantidade = $_POST['quantidade'];
-
+                            $preco = Painel::formatarMoedaBd($_POST['preco']);
                             $imagens = array();
                             $amountFiles = count($_FILES['imagem']['name']);
 
@@ -51,8 +52,8 @@
                                 'name'=>$_FILES['imagem']['name'][$i]];
                                $imagens[] = Painel::uploadFile($imagemAtual);
                             }
-                            $sql = MySql::conectar()->prepare("INSERT INTO `tb_admin.estoque` VALUE (null,?,?,?,?,?,?,?)");
-                            $sql->execute(array($nome,$descricao,$largura,$altura,$comprimento,$peso,$quantidade));
+                            $sql = MySql::conectar()->prepare("INSERT INTO `tb_admin.estoque` VALUE (null,?,?,?,?,?,?,?,?)");
+                            $sql->execute(array($nome,$descricao,$largura,$altura,$comprimento,$peso,$quantidade,$preco));
                             $lastId = MySql::conectar()->lastInsertId();
                             foreach($imagens as $key => $value){
                                 MySql::conectar()->exec("INSERT INTO `tb_admin.estoque_imagens` VALUES (null,$lastId,'$value')");
@@ -94,6 +95,10 @@
                             <div class="formGroup items-flex w100">
                                 <label class="w70">Quantidade do Produto</label>
                                 <input type="number" name="quantidade" min="0" max="900" step="5" value="0" />
+                            </div><!--formGroup-->
+                            <div class="formGroup items-flex w100">
+                                <label class="w70">Preço do Produto</label>
+                                <input type="text" name="preco" />
                             </div><!--formGroup-->
                         </div><!--formRow-->
                         <div class="formGroup">

@@ -1,20 +1,20 @@
 $(function(){
-	//Arquivo pai do sistema.
-	$('[name=preco_max],[name=preco_min]').maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
-
-
-	$(":input").bind('keyup change input', function () {
-		sendRequest();
-	});
-
-	function sendRequest(){
-
-		$('form').ajaxSubmit({
-			data:{'nome_imovel':$('input[name=texto-busca]').val()},
-			success:function(data){
-				$('body').html(data);
-			}
+	$('a.button').click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url:include_path+'ajax/finalizarPagamento.php',
+		}).done(function(data){
+			console.log(data);
+			var inOpenLightBox = PagSeguroLightbox({
+				code:data
+			},{
+				sucess: function(transactionCode){
+					location.href=include_path;
+				},
+				abort: function(){
+					location.href=include_path;
+				}
+			});
 		})
-	}
-	
-})
+	})	
+});

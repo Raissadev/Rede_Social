@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portal Imobiliário</title>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<title>Ecommerce</title>
 	<link href="<?php echo INCLUDE_PATH; ?>css/style.css" rel="stylesheet" />
-	<script src="https://unpkg.com/feather-icons"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="palavras-chave,do,meu,site">
 	<meta name="description" content="Descrição do meu website">
@@ -14,40 +13,49 @@
 </head>
 <body>
 <base base="<?php echo INCLUDE_PATH; ?> " />
-
 <header>
-	<div class="wrap w90 center grid-4x6">
-		<div class="row">
-			<div class="logo">
-				<img src="<?php INCLUDE_PATH ?>images/logo.png" />
-			</div><!--logo-->
+	<div class="wrap center">
+		<div class="row gridCustom alignCenter gridTwoMobile">
+			<div class="logoHeader itemsFlex alignCenter">
+				<a class="menuMobile"><i class="ri-menu-2-line"></i></a>
+				<h2><a href="">Raissa<span>Dev</span></a></h2>
+			</div><!--logoHeader-->
+			<div class="itemsMenu showMenu">
+				<ul class="itemsLi itemsFlex alignCenter dpGrid">
+					<li><a href="<?php echo INCLUDE_PATH; ?>">Início</a></li>
+					<li><a href="<?php echo INCLUDE_PATH; ?>loja">Catálogo</a></li>
+					<li><a href="<?php echo INCLUDE_PATH; ?>loja">Loja</a></li>
+					<li><a href="">Suporte</a></li>
+					<li><a href="">Novos</a></li>
+				</ul>
+			</div><!--itemsMenu-->
+			<div class="btsActionHeader itemsFlex alignCenter justEnd">
+				<?php 
+					if(!isset($_SESSION['login'])){
+				?>
+				<a href="<?php echo INCLUDE_PATH; ?>painel/login"><button class="btnInput">Entrar</button></a><!--btnInput-->
+				<?php }else{ ?>
+					<a href="<?php echo INCLUDE_PATH; ?>painel/home"><button class="btnInput">Painel</button></a><!--btnInput-->
+				<?php } ?>
+			</div><!--btnsActionHeader-->
 		</div><!--row-->
-		<div class="row">
-			<div class="menu">
-				<nav class="grid-9x1 gridOneMobile myNav">
-					<ul class="colMenu navSidebar hidden" id="navSidebar">
-						<li><a href="<?php INCLUDE_PATH ?>home">Início</a></li>
-						<li><a href="<?php INCLUDE_PATH ?>empreendimentos">Empreendimentos</a></li>
-						<li><a href="">Imóveis</a></li>
-						<li><a id="searchCard">Pesquisar</a></li>
-						<li><a href="">Contato</a></li>
-					</ul>
-					<ul class="colMenuIcon">
-						<li id="btnSidebar"><a><span class="menuOpen"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64.584px" height="21.75px" viewBox="0 0 64.584 21.75" enable-background="new 0 0 64.584 21.75" xml:space="preserve"><rect x="7.292" y="6.875" fill="#FFFFFF" width="50" height="1"></rect><rect x="7.292" y="13.875" fill="#FFFFFF" width="50" height="1"></rect></svg> </span></a></li>
-					</ul>
-				</nav>
-			</div><!--menu-->
+		<div class="row grid-two alignCenter">
+			<div class="searchShop itemsFlex alignCenter">
+				<form class="inputGroup itemsFlex alignCenter">
+					<input type="search" placeholder="Pesquise aqui..." />
+					<select>
+						<option>Todas as Categorias</option>
+						<option>Games</option>
+					</select>
+					<button><i class="ri-search-line"></i></button>
+				</form><!--inputGroup-->
+			</div><!--searchShop-->
+			<div class="dicesLine">
+				<ul class="itemsLi itemsLiIcons itemsFlex alignCenter justEnd">
+					<li><a href=""><i class="ri-heart-line"></i> <span>Favoritos</span></a></li>
+					<li><a href="<?php INCLUDE_PATH ?>finalizar"><i class="ri-shopping-cart-line"></i> <span>Carrinho</span></a></li>
+				</ul>
+			</div><!--dicesLines-->
 		</div><!--row-->
 	</div><!--wrap-->
 </header>
-
-<section class="searchHeader items-flex justCenter" id="searchContent">
-	<i class="closeContent" data-feather="x"></i>
-	<div class="wrap w60">
-		<div class="row">
-			<form>
-				<input type="search" name="texto-busca" placeholder="O'que você procura?" class="w100" />
-			</form>
-		</div><!--row-->
-	</div><!--wrap-->
-</section><!--searchHeader-->
