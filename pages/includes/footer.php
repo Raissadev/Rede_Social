@@ -1,14 +1,9 @@
 <footer>
-    <div class="wrap w95 center">
-        <div class="row grid-two">
-            <div class="copy">
-                <p>Todos os direitos reservados - Raissa<span>Dev</span></p>
+    <div class="wrap">
+        <div class="row">
+            <div class="copy textCenter">
+                <h4>© Copyright Todos os direitos reservados por Raissa<span>Dev</span></h4>
             </div><!--copy-->
-            <div class="networks itemsFlex justEnd">
-                <a href="https://github.com/Raissadev"><i class="ri-github-fill"></i></a>
-                <a><i class="ri-instagram-line"></i></a>
-                <a><i class="ri-linkedin-line"></i></a>
-            </div><!--networks-->
         </div><!--row-->
     </div><!--wrap-->
 </footer>

@@ -73,11 +73,6 @@
 					<ul>
 						<li><a <?php selecionadoMenu('vizualizar-pagamentos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>vizualizar-pagamentos"><i class="myGit" data-feather="dollar-sign"></i> Vizualizar Pagamentos</a></li>
 					</ul>
-					<h2>Controle de estoque</h2>
-					<ul>
-						<li><a <?php selecionadoMenu('cadastrar-produtos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-produtos"><i class="myGit" data-feather="box"></i> Cadastrar Produtos</a></li>
-						<li><a <?php selecionadoMenu('vizualizar-produtos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>vizualizar-produtos"><i class="myGit" data-feather="shopping-cart"></i> Vizualizar Produtos</a></li>
-					</ul>
 				</div><!--wrapperMenu-->
 			</div><!--menu-->
 		</div><!--wrap-->

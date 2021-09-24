@@ -193,6 +193,9 @@ input, textarea, select {
 	background-color: var(--bgInput);
 	color: var(--myGray);
 }
+input[type="checkbox"]{
+	width: auto !important;
+}
 input[type=number]{
     padding: 0 1rem !important;
 }
@@ -694,79 +697,7 @@ section.addProduct .formRow.w49{
 	padding: 0 1rem;
 }
 
-section.contentShop form.formSearchShop{
-	padding:0.6rem 1rem;
-}
-section.contentShop form.formSearchShop input[type=search]{
-	border-radius:20px 0px 0px 20px;
-}
-section.contentShop form.formSearchShop input[type=submit]{
-	border-radius: 0px 7px 7px 0px;
-	height:40px;
-}
-section.contentShop .searchContent{
-	margin-bottom:6vh;
-}
-section.contentShop .boxShop{
-	min-height: 60vh;
-}
-section.contentShop .boxShop .boxBody img{
-	width: 100%;
-	height: 40vh;
-	object-fit: cover;
-	border-radius: 5px 5px 0 0;
-}
-section.contentShop .boxShop .boxFooter, section.contentShop .boxShop .boxFooterHover{
-	padding: 0.2rem 1rem 1rem 1rem;
-}
-section.contentShop .boxShop .boxFooter .infoProduto h2{
-	margin: 0.1rem 0 0.4rem 0;
-	display: -webkit-box;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-}
-section.contentShop .boxShop .boxFooter .starsRating svg{
-	fill: transparent;
-	width: 14px;
-	height: 14px;
-	stroke: var(--myYellow);
-}
-section.contentShop .boxShop .boxFooter .starsRating svg.fill{
-	fill: var(--myYellow);
-}
-section.contentShop .boxShop .boxFooter .infoProduto h2 a{
-	font-size: 16px;
-	transition: all .3s ease 0s;
-	color: var(--titlePrimary);
-}
-section.contentShop .boxShop .boxFooter .infoProduto p span{
-	font-size: 18px;
-    font-weight: 600;
-	color: var(--titlePrimary);
-}
-section.contentShop .boxShop .boxFooter .infoProduto p span.priceOld{
-	font-size: 15px;
-    font-weight: 400;
-    text-decoration: line-through;
-	color: var(--textColor);
-}
-section.contentShop .boxShop .boxFooterHover {
-	justify-content: center;
-	min-height: 18vh;
-	position: relative;
-	animation-duration: 0.5s;
-	animation-name: hideIn;
-}
-section.contentShop .boxShop .boxFooterHover {
-	display: none;
-}
-section.contentShop .boxShop:hover .boxFooterHover {
-	display: flex;
-}
-section.contentShop .boxShop:hover .boxFooter {
-	display: none;
-}
+
   
   @keyframes hideIn {
 	0% {
@@ -781,45 +712,7 @@ section.contentShop .boxShop:hover .boxFooter {
 	}
   }
 
-/*Page Product*/
-section.cardProduct .boxShop{
-	padding: 2rem;
-	position: relative;
-}
-section.cardProduct .boxShop .sliderBox{
-	display: flex;
-	overflow: hidden;
-	scroll-behavior: smooth;
-}
-section.cardProduct .boxShop #proximo, section.cardProduct .boxShop #anterior{
-	cursor: pointer;
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: var(--bgTwo);
-    box-shadow: var(--boxShadow);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top:40vh;
-	left:-10px;
-}
-section.cardProduct .boxShop #proximo svg, section.cardProduct .boxShop #anterior svg{
-	stroke:var(--titlePrimary);
-}
-section.cardProduct .boxShop #proximo{
-	left:unset;
-	right:-10px;
-}
-section.cardProduct .boxShop .boxBody img{
-	min-width:100%;
-	height: 80vh;
-	object-fit: cover;
-	border-radius:7px;
-	animation-duration: 1s;
-	animation-name: slideIn;
-}
+
 @keyframes slideIn {
 	0% {
 		opacity: 0;
@@ -829,176 +722,7 @@ section.cardProduct .boxShop .boxBody img{
 	}
   }
 
-section.cardProduct .boxShop .active{
-	padding: 1rem;
-	border-bottom: 1px solid var(--borderColor);
-	justify-content: center;
-	display: flex;
-	align-items: center;
-}
-section.cardProduct .boxShop .boxFooter input{
-	margin: 0 0.3rem;
-	min-width: 9rem;
-}
-section.cardProduct .boxShop .boxFooter input.deletProduct{
-	background-color: var(--myRad);
-}
-section.cardProduct .boxShop .boxFooter input.updateProduct{
-	background-color: var(--myBlueTwo);
-}
-section.cardProduct .boxShop .boxFooter .titleProduct h2{
-	font-size: 1.5rem;
-	margin: 1rem 0;
-}
-section.cardProduct .boxShop .boxFooter .descricao h4{
-	font-size: 1rem;
-    margin-bottom: 0.75rem;
-}
-section.cardProduct .boxShop .boxFooter .descricao textarea{
-	width: 100%;
-	border: 0px;
-}
-section.cardProduct .boxShop .boxFooter .cardInfo{
-	border:1px solid var(--borderColor);
-}
-section.cardProduct .boxShop .cardFooterInfo{
-	margin-top: 2rem;
-}
-section.cardProduct .boxShop .cardFooterInfo{
-	margin-top: 2rem;
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo{
-	border:1px solid var(--borderColor);
-	border-radius: 5px;
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .headerCard{
-	padding: 1rem;
-	border-bottom: 1px solid var(--borderColor);
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .headerCard a.btnTab{
-	background-color: transparent;
-	margin: 0 0.5rem;
-	color: var(--titlePrimary);
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .headerCard a.btnTab.active, section.cardProduct .boxShop .cardFooterInfo .cardInfo .headerCard a.btnTab:hover{
-	background-color: var(--bgMain);
-	color: var(--myPurpleTwo);
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .bodyCard{
-	padding: 1rem;
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .bodyCard h4{  
-	font-size: 1.125rem;
-	margin-bottom: 0.7rem;
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .bodyCard p{  
-	padding:0.2rem 0;
-	display: flex;
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .bodyCard p span{  
-	font-size: 0.9rem;
-    width: 20%;
-	color: var(--textColor);
-}
-section.cardProduct .boxShop .cardFooterInfo .cardInfo .bodyCard p input.resultInfoProduct{  
-	border: 0px;
-	height: 35px;
-}
-section.cardProduct .boxShop .imagesGrid .fileSend{  
-	margin:4vh 0;
-}
-section.cardProduct .boxShop .imagesGrid .gridImg{  
-	border: 1px solid var(--borderColor);
-	border-radius: 7px;
-	max-width: 100%;
-	flex-direction: row;
-	overflow-x:auto;
-}
-section.cardProduct .boxShop .especificacoes .row{  
-	height: 100%;
-}
-section.cardProduct .boxShop .especificacoes input[type=submit]{  
-	margin: 3rem 0 0 0;
-}
-section.cardProduct .boxShop .imagesGrid .gridImg img{  
-	min-width: 24%;
-	max-width: 24%;
-	margin-right: 2%;
-	border-radius: 7px;
-	height: 25vh;
-	object-fit: cover;
-}
-section.cardProduct .boxShop .imagesGrid .gridImg img:nth-last-child{  
-	margin-right: 0%;
-}
-section.cardProduct .boxShop .imagesGrid .btnsImgs{
-	min-height: 15vh;
-}
-section.cardProduct .boxShop .imagesGrid .fileSend.btnsImgs{
-	align-items: flex-start;
-	margin:0;
-}
-section.cardProduct .boxShop .imagesGrid .fileSend.btnsImgs input[type=file]{
-	min-height: 15vh;
-	max-width: 11rem;
-}
-section.cardProduct .boxShop .imagesGrid .deletImgs.btnsImgs a{
-	width: 10rem;
-	float:right;
-}
-.bag{
-	max-width: 25%;
-    position: absolute;
-    right: 20%;
-    top: -1.8%;
-}
-section.contentShop .boxShop .ribbon span {
-    color: #FFF;
-    background: linear-gradient(var(--myPurpleTwo) 0%, var(--myPurple) 100%);
-}
-.ribbone{
-	display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.ribbon span {
-    font-size: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 20px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    width: 100px;
-    display: block;
-    box-shadow: 0 3px 10px -5px black;
-    position: absolute;
-	z-index: 2;
-	top: 1rem;
-    right: -1.6rem;
-}
-.ribbon span::before {
-    border-left: 3px solid var(--myPurple);
-    border-top: 3px solid var(--myPurple);
-	border-right: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-	content: "";
-    position: absolute;
-    z-index: 1;
-	left: -1px;
-    height: 100%;
-}
-.ribbon span::after {
-    border-right: 3px solid var(--myPurple);
-    border-top: 3px solid var(--myPurple);
-	border-bottom: 3px solid transparent;
-	content: "";
-    position: absolute;
-    z-index: 1;
-    border-left: 3px solid transparent;
-	right:-1px;
-    height: 100%;
-}
+
 
 
 

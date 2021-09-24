@@ -26,13 +26,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link href="<?php echo INCLUDE_PATH ?>css/style.css" rel="stylesheet" />
-	<link href="css/login.css" rel="stylesheet" />
 </head>
 <body>
-	<section class="boxLogin itemsFlex alignCenter justCenter">
-		<div class="wrap w100">
-			<div class="row">
-				<div class="card formLogin">
 				<?php
 					if(isset($_POST['acao'])){
 						$user = $_POST['user'];
@@ -60,33 +55,30 @@
 							echo '<div class="erro-box"><i class="fa fa-times"></i> Usuário ou senha incorretos!</div>';
 						}}
 				?>
-					<div class="title textCenter">
-						<h2>Efetue o Login</h2>
-					</div><!--title-->
-					<form method="post">
-						<input class="w100" type="text" name="user" placeholder="Login..." required>
-						<input class="w100" type="password" name="password" placeholder="Senha..." required>
-						<div class="checkGroup items-flex">
-							<input type="checkbox" name="lembrar" />
-							<label>Lembrar-me</label>
-						</div><!--checkGroup-->
-						<div class="formGroup">
-							<div class="inputFormGroup">
-								<input type="submit" name="acao" value="Logar!">
-							</div><!--inputGroup-->
-						</div><!--formGroup-->
-						<div class="cardNetworks textCenter">
-							<p>Ou</p>
-							<div class="row itemsFlex alignCenter justCenter">
-								<a class="facebook"><i class="ri-facebook-box-fill"></i></a>
-								<a class="twitter"><i class="ri-twitter-fill"></i></a>
-								<a class="google"><i class="ri-google-fill"></i></a>
-							</div><!--row-->
-						</div><!--cardNetworks-->
+					<section class="boxLogin itemsFlex alignCenter justCenter">
+    					<div class="wrap">
+        					<div class="row">
+            					<div class="title textCenter marginDownDefault">
+                					<h3>Faça Login!</h3>
+                					<p>LOREM IPSUM DOLOR SIT AMET</p>
+            					</div><!--title-->
+            			<div class="cardLogin itemsFlex alignCenter justCenter">
+							<form method="post" class="textCenter">
+								<input class="w100" type="text" name="user" placeholder="Login..." required>
+								<input class="w100" type="password" name="password" placeholder="Senha..." required>
+							<div class="checkGroup itemsFlex alignCenter">
+								<input class="checkbox" type="checkbox" name="lembrar" />
+								<label>Lembrar-me</label>
+							</div><!--checkGroup-->
+							<div class="formGroup">
+								<div class="inputFormGroup">
+									<input type="submit" name="acao" value="Logar!">
+								</div><!--inputGroup-->
+							</div><!--formGroup-->
 					</form>
-				</div><!--card-->
-			</div><!--row-->
-		</div><!--wrap-->
-	</section><!--boxLogin-->
+					</div><!--cardLogin-->
+				</div><!--row-->
+			</div><!--wrap-->
+		</section><!--boxLogin-->
 </body>
 </html>

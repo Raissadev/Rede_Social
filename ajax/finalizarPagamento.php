@@ -1,7 +1,7 @@
 <?php
     include('../incluedeConstantes.php');
-    $data['token'] = '6C2A873D3E1D4AD38B69CBB113FE00E0';
-	$data['email'] = 'gui_grillo13@hotmail.com';
+    $data['token'] = '';
+	$data['email'] = '';
 	$data['currency'] = 'BRL';
     $data['notificationURL'] = 'http://localhost/myCode/Back-end/Projetos_Back/Ecommerce/retorno.php';
     $data['reference'] = uniqid();
