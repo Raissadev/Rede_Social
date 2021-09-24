@@ -23,7 +23,7 @@
 	define('HOST','localhost');
 	define('USER','root');
 	define('PASSWORD','');
-	define('DATABASE','mybanco_php');
+	define('DATABASE','database.sql');
 
 	//Constantes para o painel de controle
 	define('NOME_EMPRESA','Raissa dev');

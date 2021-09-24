@@ -810,19 +810,6 @@ section.addProduct .formRow.w49{
 	section.addProduct .formRow.w49 {
 		max-width: 100%;
 	}
-	section.cardProduct .boxShop .cardFooterInfo .cardInfo .bodyCard p span{  
-		width: 50%;
-	}
-	section.cardProduct .boxShop .imagesGrid .deletImgs.btnsImgs a {
-		float: none;
-	}
-	section.cardProduct .boxShop .imagesGrid .gridImg img{  
-		min-width: 49%;
-		max-width: 49%;
-	}
-	.bag {
-		right: 35%;
-	}	
 }
 
 
