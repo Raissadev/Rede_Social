@@ -19,7 +19,7 @@
   <li>jQuery</li>
 </ul>
 
-![gif](https://user-images.githubusercontent.com/82960240/138617697-8a48dacc-9421-411a-8f3f-a03dd6f9e397.gif)
+![redeSocialGif](https://user-images.githubusercontent.com/82960240/138715423-2b940dbf-11b2-4724-9142-86097dca8422.gif)
 
 
 <h3>Autor</h3>
