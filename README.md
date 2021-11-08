@@ -1,20 +1,22 @@
-# Rede_Social
-<h2>Sobre o Projeto</h2>
-<p>Rede Social interativo e atraente, ele possui algumas funcionalidades como: adicionar aos amigos, criar posts entre outros... 😊</p>
-<h3>Front-end:</h3>
+# Rede Social
+<h3>Sobre o Projeto</h3>
+<p>Rede Social interativo e atraente, ele possui algumas funcionalidades como: adicionar aos amigos, criar posts entre outros...</p>
+
 <ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JS</li>
-</ul>
-<h3>Back-end:</h3>
-<ul>
-  <li>PHP</li>
-  <li>Database: MySql</li>
-</ul>
-<h3>Stacks:</h3>
-<ul>
-  <li>jQuery</li>
+  <li>Lenguages:</li>
+  <i>PHP, JavaScript e SQL</i>
+  
+  <li>Database:</li>
+  <i>MySql</i>
+  
+  <li>Library:</li>
+  <i>jQuery</i>
+  
+  <li>Style:</li>
+  <i>Cascading Style Sheets</i>
+  
+  <li>Markup Language:</li>
+  <i>HTML</i>
 </ul>
 
 ![redeSocialGif](https://user-images.githubusercontent.com/82960240/138715423-2b940dbf-11b2-4724-9142-86097dca8422.gif)
