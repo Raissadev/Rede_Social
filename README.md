@@ -19,7 +19,7 @@
   <i>HTML</i>
 </ul>
 
-![redeSocialGif](https://user-images.githubusercontent.com/82960240/138715423-2b940dbf-11b2-4724-9142-86097dca8422.gif)
+![land](https://user-images.githubusercontent.com/82960240/141573290-018267b7-1ea4-4369-8b83-7c0f1da66496.gif)
 
 <hr />
 <h3>Autor</h3>
